@@ -1,7 +1,7 @@
 
 from bauhaus import Encoding, proposition, constraint
 from bauhaus.utils import count_solutions, likelihood
-
+# sup
 # Encoding that will store all of your constraints
 E = Encoding()
 
