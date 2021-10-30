@@ -1,7 +1,6 @@
 
 from bauhaus import Encoding, proposition, constraint
 from bauhaus.utils import count_solutions, likelihood
-# sup
 # Encoding that will store all of your constraints
 E = Encoding()
 
@@ -82,4 +81,56 @@ if __name__ == "__main__":
 
 
 
-# hello
+
+
+
+
+##### WHAT WE ARE WORKING ON (STILL NEED TO BE IMPLEMENTED TO THE ACTUAL CODE ABOVE)#######
+
+# no constraints added yet
+team = [“A”, “A”, “A”, “B”, “B”, “B”, “C”, “D”] # 8 champs for player’s team
+options = [“A”, “B”, “C”, “F”] # 4 options for player to choose from
+optionsArrays = []
+
+
+aQuantity = [True, True, True, False, False, False, False]
+bQuantity = [True, True, True, False, False, False, False]
+cQuantity = [True, False, False, False, False, False, False]
+dQuantity = [True, False, False, False, False, False, False]
+eQuantity = [False, False, False, False, False, False, False]
+fQuantity = [False, False, False, False, False, False, False]
+gQuantity = [False, False, False, False, False, False, False]
+hQuantity = [False, False, False, False, False, False, False]
+jQuantity = [False, False, False, False, False, False, False]	
+
+# Check which champions are in options, and add the champ and its respective list to
+# optionsArray
+if “A” in options:
+	optionsArrays.append([“A”, aQuantity])
+if “B” in options:
+	optionsArrays.append([“B”, bQuantity])
+if “C” in options:
+	optionsArrays.append([“C”, cQuantity])
+if “D” in options:
+	options.Arrays.append([“D”, dQuantity])
+if “E” in options:
+	optionsArrays.append([“E”, eQuantity])
+if “F” in options:
+	optionsArrays.append([“F”, fQuantity])
+if “G” in options:
+	optionsArrays.append([“G”, gQuantity])
+if “H” in options:
+	optionsArrays.append([“H”, hQuantity])
+if “J” in options:
+	optionsArrays.append([“J”, jQuantity])
+
+
+for i in range(5, 0, -2)
+for option[0] in optionsArrays:
+	if option[1][i]:
+		option[1][i + 1] = True
+		return option[0]
+for option[0] in optionsArrays:
+if option[1][0]:
+	option[1][1] = True
+	return option[0]
