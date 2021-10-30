@@ -112,7 +112,7 @@ if “B” in options:
 if “C” in options:
 	optionsArrays.append([“C”, cQuantity])
 if “D” in options:
-	options.Arrays.append([“D”, dQuantity])
+	optionsArrays.append([“D”, dQuantity])
 if “E” in options:
 	optionsArrays.append([“E”, eQuantity])
 if “F” in options:
@@ -126,11 +126,11 @@ if “J” in options:
 
 
 for i in range(5, 0, -2)
-for option[0] in optionsArrays:
-	if option[1][i]:
-		option[1][i + 1] = True
-		return option[0]
-for option[0] in optionsArrays:
-if option[1][0]:
-	option[1][1] = True
-	return option[0]
+    for options[0] in optionsArrays:
+	    if options[1][i]:
+		    option[1][i + 1] = True
+		    return option[0]
+for options[0] in optionsArrays:
+    if options[1][0]:
+	    options[1][1] = True
+	    return options[0]
