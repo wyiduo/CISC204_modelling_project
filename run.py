@@ -83,54 +83,66 @@ if __name__ == "__main__":
 
 
 
-
-
 ##### WHAT WE ARE WORKING ON (STILL NEED TO BE IMPLEMENTED TO THE ACTUAL CODE ABOVE)#######
 
+# Randomly generate 8 champions can be done with regular python code, no predicate logic needed
+# Only models singleplayer aspect, the player will get 8 champions and there are 4 champions for the player to choose frome
+# which champion of the 4 is the best choice?
+
+
 # no constraints added yet
-team = [“A”, “A”, “A”, “B”, “B”, “B”, “C”, “D”] # 8 champs for player’s team
-options = [“A”, “B”, “C”, “F”] # 4 options for player to choose from
+team = ["A", "A", "A", "B", "B", "B", "C", "D"] # 8 random champs for player’s team
+options = ["A", "B", "C", "F"] # 4 random options for player to choose from
 optionsArrays = []
 
-
-aQuantity = [True, True, True, False, False, False, False]
-bQuantity = [True, True, True, False, False, False, False]
-cQuantity = [True, False, False, False, False, False, False]
-dQuantity = [True, False, False, False, False, False, False]
-eQuantity = [False, False, False, False, False, False, False]
-fQuantity = [False, False, False, False, False, False, False]
-gQuantity = [False, False, False, False, False, False, False]
-hQuantity = [False, False, False, False, False, False, False]
-jQuantity = [False, False, False, False, False, False, False]	
+# boolean arrays to represent the quantity of each champion in team
+# when xQuantity[0] is True, that means it is true that there is at least 0 of that champion team
+# when xQuantity[1] is True, it is true that there is at least 1 of that champion in team, etc
+aQuantity = [True, True, True, True , False, False, False]
+bQuantity = [True, True, True, True, False, False, False]
+cQuantity = [True, True, False, False, False, False, False]
+dQuantity = [True, True, False, False, False, False, False]
+eQuantity = [True, False, False, False, False, False, False]
+fQuantity = [True, False, False, False, False, False, False]
+gQuantity = [True, False, False, False, False, False, False]
+hQuantity = [True, False, False, False, False, False, False]
+jQuantity = [True, False, False, False, False, False, False]	
 
 # Check which champions are in options, and add the champ and its respective list to
-# optionsArray
-if “A” in options:
-	optionsArrays.append([“A”, aQuantity])
-if “B” in options:
-	optionsArrays.append([“B”, bQuantity])
-if “C” in options:
-	optionsArrays.append([“C”, cQuantity])
-if “D” in options:
-	optionsArrays.append([“D”, dQuantity])
-if “E” in options:
-	optionsArrays.append([“E”, eQuantity])
-if “F” in options:
-	optionsArrays.append([“F”, fQuantity])
-if “G” in options:
-	optionsArrays.append([“G”, gQuantity])
-if “H” in options:
-	optionsArrays.append([“H”, hQuantity])
-if “J” in options:
-	optionsArrays.append([“J”, jQuantity])
+# optionsArray.
+# Ensures that the champions are placed in order from highest to lowest value
+if "A" in options:
+	optionsArrays.append(["A", aQuantity])
+if "B" in options:
+	optionsArrays.append(["B", bQuantity])
+if "C" in options:
+	optionsArrays.append(["C", cQuantity])
+if "D" in options:
+	options.Arrays.append(["D", dQuantity])
+if "E" in options:
+	optionsArrays.append(["E", eQuantity])
+if "F" in options:
+	optionsArrays.append(["F", fQuantity])
+if "G" in options:
+	optionsArrays.append(["G", gQuantity])
+if "H" in options:
+	optionsArrays.append(["H", hQuantity])
+if "J" in options:
+	optionsArrays.append(["J", jQuantity])
 
+# if a champion is in optionsArrays, that means at least one of that champion is available.
+# look for groups of 5, 3, or 1 (in which case adding 1 would make groups of 6, 4, or 2
+# respectively)
+# checks in order of highest to lowest champion since optionsArray is already in that order
+for i in range(5, 0, -2):
+    for j in range(len(optionsArrays)):
+	    if optionsArrays[j][1][i]:
+		    optionsArrays[j][1][i + 1] = True
+		    break
 
-for i in range(5, 0, -2)
-    for options[0] in optionsArrays:
-	    if options[1][i]:
-		    option[1][i + 1] = True
-		    return option[0]
-for options[0] in optionsArrays:
-    if options[1][0]:
-	    options[1][1] = True
-	    return options[0]
+# since the available champions are listed in order from highest to lowest, add the next highest
+# single by adding the first available champion
+for i in range(7):
+    if not optionsArrays[0][1][i]:
+	    optionsArrays[0][1][i] = True
+	    break
