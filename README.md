@@ -21,7 +21,7 @@ The goal of the model is to seek the best possible champion of choice on the boa
 
 ![More_examples](cisc204_final-project_more_examples.PNG)
 
-For more information, you can read the project report: [modelling_report.docx](documents/final/modelling_report.docx).
+For more information, you can download the project report: [modelling_report.docx](https://github.com/wyiduo/CISC204_modelling_project/raw/main/documents/final/modelling_report.docx).
 
 ## Structure
 
