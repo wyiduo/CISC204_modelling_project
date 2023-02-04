@@ -1,8 +1,27 @@
 # CISC/CMPE 204 Modelling Project
 
-Welcome to the major project for CISC/CMPE 204 (Fall 2021)!
+This project models a simplified version of the Teamfight Tactics (TFT) strategy game using various propositions and constraints.
 
-Change this README.md file to summarize your project (few sentences at most), and provide pointers to the general structure of the repository. How you organize and build things (which files, how you structure things, etc) is entirely up to you! The only things you must keep in place are what is already listed in the **Structure** section below.
+#### Simplifications:
+You will win against your opponent(s) based on this checklist:
+-	6 of a kind
+-	4 of a kind
+-	2 of a kind
+-	Single
+
+If there is a tie, you will win if you have the highest 6/4/2/1 of a kind.
+
+Champions are denoted with letters. The champion of the highest value is A, the champion of the second highest value is B, ..., the champion with the lowest value is J.
+
+The goal of the model is to seek the best possible champion of choice on the board to "acquire" based off of:
+- (1) the champions currently present on the board available for acquisition, and
+- (2) the champions currently present in your "hand".
+
+**Examples:**
+
+![More_examples](cisc204_final-project_more_examples.PNG)
+
+For more information, you can read the project report at [Modelling_report](documents/final/modelling_report.docx).
 
 ## Structure
 
